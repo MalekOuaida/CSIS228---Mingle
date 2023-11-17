@@ -1,16 +1,10 @@
 const mysql = require('mysql');
-const dotenv = require('dotenv');
+const dbConfig = require('../config/db.config');
 
-// Load environment variables
-dotenv.config();
+const db = mysql.createConnection(dbConfig);
 
-// Create a MySQL connection using environment variables
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME
-});
+// ... rest of the database/index.js file
+
 
 // Connect to the database
 db.connect(err => {
