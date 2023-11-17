@@ -1,26 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const UserController = require('../controllers/UserController');
+const { validateRegistration, validateLogin, validateUpdate } = require('../validators/userValidators');
 
-// Import the user controller
-const UserController = require('../controllers/userController');
-
-// User registration
-router.post('/register', UserController.register);
-
-// User login
-router.post('/login', UserController.login);
-
-// Retrieve a user's profile
+router.post('/register', validateRegistration, UserController.register);
+router.post('/login', validateLogin, UserController.login);
+router.put('/profile/:userId', validateUpdate, UserController.updateProfile);
 router.get('/profile/:userId', UserController.getProfile);
-
-// Update a user's profile
-router.put('/profile/:userId', UserController.updateProfile);
-
-// Delete a user
 router.delete('/:userId', UserController.deleteUser);
-
-// Retrieve all users (optional)
 router.get('/', UserController.getAllUsers);
 
-// Export the router
 module.exports = router;
