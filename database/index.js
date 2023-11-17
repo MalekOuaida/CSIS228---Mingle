@@ -3,10 +3,6 @@ const dbConfig = require('../config/db.config');
 
 const db = mysql.createConnection(dbConfig);
 
-// ... rest of the database/index.js file
-
-
-// Connect to the database
 db.connect(err => {
     if (err) {
         console.error('Error connecting to MySQL database:', err);
