@@ -11,4 +11,12 @@ db.connect(err => {
     console.log('Successfully connected to the MySQL database.');
 });
 
+db.query('SELECT 1', (error, results, fields) => {
+    if (error) {
+        console.error('Error executing test query:', error);
+    } else {
+        console.log('Database connection test successful');
+    }
+});
+
 module.exports = db;

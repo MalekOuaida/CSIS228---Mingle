@@ -20,7 +20,7 @@ db.query('SELECT 1', (err, results) => {
         console.error('Error testing the MySQL database connection:', err);
         return;
     }
-    console.log('Successfully tested the MySQL database connection.');
+    console.log('Database connection test successful');
 });
 
 
