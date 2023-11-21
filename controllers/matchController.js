@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { checkMatch, getMatchesForUser } = require('../services/match.services');
+const { checkMatch, getMatchesForUser } = require('../services/matchServices');
 
 const checkMatchController = async (req, res) => {
     const { userId1, userId2 } = req.body;

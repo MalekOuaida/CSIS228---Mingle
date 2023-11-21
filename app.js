@@ -27,7 +27,7 @@ db.query('SELECT 1', (err, results) => {
 const userRoutes = require('./routes/userRoutes');
 const interestRoutes = require('./routes/interestRoutes');
 const photoRoutes = require('./routes/photoRoutes');
-const likeRoutes = require('./routes/likeRoutes');
+const likeRoutes = require('./routes/likesRoutes');
 const matchRoutes = require('./routes/matchRoutes');
 
 app.use('/api/users', userRoutes);
@@ -49,7 +49,7 @@ app.use((err, req, res, next) => {
     res.status(500).send('Something broke!');
 });
 
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

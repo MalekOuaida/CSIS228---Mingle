@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { addPhoto, updatePhoto, getPhoto, deletePhoto, getAllPhotos } = require('../services/photos.services');
+const { insertPhoto, updatePhoto, getPhotoById, deletePhoto, getPhotos } = require('../services/photoServices');
 
 const addPhotoController = async (req, res) => {
     const errors = validationResult(req);
@@ -9,7 +9,7 @@ const addPhotoController = async (req, res) => {
 
     const { userId, photoUrl } = req.body;
     try {
-        const newPhoto = await addPhoto(userId, photoUrl);
+        const newPhoto = await insertPhoto(userId, photoUrl);
         res.status(200).json({ message: "Photo added successfully", newPhoto });
     } catch (error) {
         res.status(500).json({ message: error?.message });
@@ -30,7 +30,7 @@ const updatePhotoController = async (req, res) => {
 const getPhotoController = async (req, res) => {
     const { photoId } = req.params;
     try {
-        const photo = await getPhoto(photoId);
+        const photo = await getPhotoById(photoId);
         res.status(200).json({ photo });
     } catch (error) {
         res.status(500).json({ message: error?.message });
@@ -49,7 +49,7 @@ const deletePhotoController = async (req, res) => {
 
 const getAllPhotosController = async (req, res) => {
     try {
-        const photos = await getAllPhotos();
+        const photos = await getPhotos();
         res.status(200).json({ photos });
     } catch (error) {
         res.status(500).json({ message: error?.message });

@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { addLike, checkMatch, deleteLike } = require('../services/likes.services');
+const { addLike, checkMatch, deleteLike } = require('../services/likesServices');
 
 const addLikeController = async (req, res) => {
     const errors = validationResult(req);
@@ -32,6 +32,6 @@ const deleteLikeController = async (req, res) => {
 };
 
 module.exports = {
-    addLikeController,
-    deleteLikeController
+        addLikeController,
+        deleteLikeController,
 };

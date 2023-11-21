@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { getUsers, insertUser, authenticate, updateUser, getUserProfile, deleteUser } = require('../services/users.services');
+const { getUsers, insertUser, authenticate, updateUser, getUserProfile, deleteUser } = require('../services/userServices');
 
 const authenticateController = async (req, res) => {
     const { username, password } = req.body;
