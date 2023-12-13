@@ -65,7 +65,6 @@ db.query(query, [userId], (err, results) => {
     });
 });
 
-
 app.get('/user/:id/interests', (req, res) => {
     const userId = req.params.id;
     const query = 'SELECT * FROM Interest WHERE user_id = ?';
