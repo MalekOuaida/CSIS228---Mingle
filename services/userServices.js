@@ -1,4 +1,4 @@
-const db = require('../database/index'); // Make sure this path is correct
+const db = require('../database/index');
 
 const getUsers = async () => {
     const query = 'SELECT * FROM Users';
@@ -16,13 +16,15 @@ const insertUser = async (username, email, password, firstname, lastname, gender
 
     try {
         const [result] = await db.query(query, values);
+        console.log(result);    
         return result;
     } catch (error) {
         throw new Error('Error inserting user: ' + error.message);
     }
 };
 
-const authenticate = async (username, password) => {
+
+const authenticate = async (username, password) => { 
     const query = 'SELECT * FROM Users WHERE username = ? AND password = ?';
     try {
         const [users] = await db.query(query, [username, password]);

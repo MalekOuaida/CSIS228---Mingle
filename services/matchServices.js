@@ -15,6 +15,8 @@ const checkMatch = async (userId1, userId2) => {
     }
 };
 
+
+
 const getMatchesForUser = async (userId) => {
     const query = `
         SELECT * FROM Matches 
