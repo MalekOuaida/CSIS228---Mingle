@@ -24,7 +24,10 @@
   },
   "homepage": "https://github.com/MalekOuaida/CSIS228---Mingle#readme",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
@@ -34,6 +37,16 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "autoprefixer": "^10.4.16",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.4",
+    "nodemon": "^3.0.2",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Match</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Champignon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/match_styles.css"></head></head>
+</head>
+<body>
+    <div class="funny-quote">
+        I don’t make mistakes. I just date them.
+    </div>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div id="profile-stack" class="profile-stack position-relative">
+        <div id="message" class="message" style="display: none;"></div>
+        <img src="/images/aiony-haust-3TLl_97HNJo-unsplash.jpg" class="profile-img" id="current-img">
+        <button class="btn btn-danger dislike-btn" onclick="handleDislike()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
+        </button>
+        <button class="btn btn-success like-btn" onclick="handleLike()">
+            <i class="bi bi-heart-fill"></i>
+        </button>
+    </div>
+</div>
+
+<script>
+    let currentImageIndex = 0;
+    const images = [
+        '/images/aiony-haust-3TLl_97HNJo-unsplash.jpg',
+        '/images/marco-testi-5LZkkBSx5cg-unsplash.jpg',
+        '/images/aiony-haust-IXYxqP4zejo-unsplash.jpg',
+        '/images/apostolos-vamvouras-iirmGhQQL7o-unsplash.jpg',
+        '/images/ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg',
+        '/images/diane-serik-7LA6o-mVFx4-unsplash.jpg',
+        '/images/fleur-kaan-PG6Em2m7Ar4-unsplash.jpg',
+        '/images/karina-tess-fWTmwgjRkMg-unsplash.jpg',
+        '/images/daniel-monteiro-COgbRUTvL-s-unsplash.jpg',
+        '/images/dom-hill-nimElTcTNyY-unsplash.jpg',
+        '/images/pouriya-kafaei-dNmmjX2Owxk-unsplash.jpg',
+        '/images/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg',
+        '/images/igor-rand-1aal_X7xO-8-unsplash.jpg'
+    ];
+    const profileImage = document.getElementById('current-img');
+
+    const likeMessages = [
+        "Looks like a match made in heaven!", 
+        "Swipe right into romance!",
+        "Looks like a match made in heaven!",
+        "Swipe right into romance!",
+        "Heart-eyes moment!",
+        "Is it love at first swipe?",
+        "You've got a good eye!",
+        "That's a promising match!",
+        "Sparks are flying already!",
+        "Seems like a great choice!",
+        "You two might just click!",
+        "Cupid's arrow has struck!",
+        "What a catch!",
+        "Fingers crossed for love!",
+        "Could this be fate?",
+        "Hope it's a sweet match!",
+        "Sending good vibes your way!",
+    ];
+
+    const dislikeMessages = [
+        "Not everyone's cup of tea.", 
+        "Better luck next swipe!",
+        "Not everyone's cup of tea.",
+        "Better luck next swipe!",
+        "Sometimes it's just a nope.",
+        "On to the next one!",
+        "There's plenty of fish in the sea.",
+        "Just not feeling it, huh?",
+        "Not your type, I guess.",
+        "Swipe left and move on!",
+        "It's okay to be picky.",
+        "Not the right vibe.",
+        "Keep searching, they're out there!",
+        "Just a miss this time.",
+        "The journey continues!",
+        "Someone better is waiting!",
+        "The right one is still out there.",
+    ];
+
+    function showMessage(message) {
+        const messageDiv = document.getElementById('message');
+        messageDiv.textContent = message;
+        messageDiv.style.display = 'block';
+    }
+
+    function getRandomMessage(messages) {
+        return messages[Math.floor(Math.random() * messages.length)];
+    }
+
+    function handleLike() {
+        const message = getRandomMessage(likeMessages);
+        handleAction(message);
+    }
+
+    function handleDislike() {
+        const message = getRandomMessage(dislikeMessages);
+        handleAction(message);
+    }
+
+    function handleAction(message) {
+        showMessage(message);
+        currentImageIndex++;
+        if (currentImageIndex < images.length) {
+            profileImage.src = images[currentImageIndex];
+        } else {
+            profileImage.style.display = 'none';
+            document.querySelectorAll('.btn').forEach(btn => btn.style.display = 'none');
+            showMessage("No more swipes for today, you looked at everyone."); // Final message
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

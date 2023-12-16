@@ -1,0 +1,78 @@
+/* Ensure to link this CSS after Bootstrap's CSS to override default styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #590517; /* Dark red background */
+    color: #C19218; /* Golden text color */
+}
+
+header, footer {
+    background-color: #C19218; /* Golden background for header and footer */
+    color: #590517; /* Dark red text */
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #590517;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Bootstrap modifications */
+.btn-primary {
+    background-color: #C19218;
+    border-color: #590517;
+}
+
+.btn-primary:hover {
+    background-color: #590517;
+    border-color: #C19218;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}

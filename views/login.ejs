@@ -4,36 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/styles.css"> <!-- Include your stylesheet here -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login_styles.css"> <!-- Include your stylesheet here -->
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Navigation Bar (You can use the same code as in the index.ejs file) -->
-            <ul class="horizontal-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/login">Login</a></li>
-                <!-- Add other navigation links as needed -->
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Login</h1>
-        <form action="/login" method="POST">
-            <!-- Add your login form fields here -->
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+    <div class="login-page">
+        <div class="login-image"></div>
+        <div class="login-container">
+        <h1 class="login-title">Log In</h1>
+        <p class="welcome-back">Welcome Back.</p>
+        <p class="instructions">Please Enter Your Details.</p>
+        <form action="/login" method="POST" class="login-form">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
             
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
             
-            <button type="submit">Login</button>
+            <div class="form-footer">
+                <button type="submit" class="login-button">Login</button>
+                <a href="/signup" class="sign-up">Don’t have an account? Sign Up</a>
+            </div>
         </form>
-    </main>
-
-    <footer>
-        <!-- Footer content if needed -->
-    </footer>
+    </div>
 </body>
 </html>

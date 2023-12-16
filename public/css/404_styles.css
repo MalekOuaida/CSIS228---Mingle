@@ -1,0 +1,31 @@
+body {
+    background-color: #F8F9FA; /* Light grey background */
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 8rem; /* Big, bold number 404 */
+    color: #6C757D; /* Muted color */
+}
+
+p {
+    color: #6C757D; /* Muted color text */
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6rem; /* Smaller 404 for mobile */
+    }
+}

@@ -1,0 +1,83 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Reset some basic elements */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background color for the entire page */
+body {
+    background-color: #590517;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Center the login container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Style the login title */
+.login-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Style the welcome text */
+.welcome-back, .instructions {
+    font-style: italic;
+}
+
+/* Style the form itself */
+.login-form {
+    margin-top: 20px;
+}
+
+/* Style the input groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Style the labels and inputs */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Style the form footer */
+.form-footer {
+    text-align: center;
+}
+
+/* Style the login button */
+.login-button {
+    background-color: #C19218;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Style the sign-up link */
+.sign-up {
+    color: #C19218;
+    text-decoration: none;
+    display: block;
+}
+
+/* Add more styles as needed */

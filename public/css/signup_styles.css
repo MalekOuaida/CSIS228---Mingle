@@ -1,0 +1,66 @@
+body, h2, p, a, form, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+body {
+    background-color: #590517; /* Dark maroon background to match login page */
+    font-family: 'Roboto', sans-serif; /* Consistent font with the login page */
+}
+
+.signup-page .container {
+    padding-top: 50px;
+    padding-bottom: 50px; /* Spacing at the top and bottom */
+}
+
+.signup-form {
+    background: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.signup-form h2 {
+    font-family: 'DM Serif Display', serif; /* Elegant serif font for the title */
+    color: #590517; /* Color to match the page background */
+    margin-bottom: 20px;
+}
+
+.signup-form label {
+    font-weight: normal; /* Avoid bold labels for a lighter feel */
+    color: #333; /* Dark grey color for readability */
+}
+
+.signup-form .form-control {
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded borders for inputs */
+    padding: 10px; /* Comfortable padding inside inputs */
+    font-size: 16px; /* Slightly larger font size for readability */
+}
+
+.signup-form .btn-primary {
+    background-color: #C19218; /* Gold color to match the login button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px; /* Larger font size for the button */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent shadow with the form */
+}
+
+.signup-form a {
+    color: #C19218; /* Gold color to match the button */
+}
+
+/* Hover effects for button */
+.signup-form .btn-primary:hover {
+    background-color: darken(#C19218, 5%); /* Slightly darker on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .signup-form {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+}
