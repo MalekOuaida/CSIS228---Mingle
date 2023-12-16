@@ -63,7 +63,7 @@ body, html {
 
 .message {
     position: fixed;
-    bottom: 100px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #C19218; /* The gold color used previously */
@@ -88,4 +88,3 @@ body, html {
     text-align: center;
     z-index: 5; /* Above the image */
 }
-
