@@ -78,13 +78,13 @@ body, html {
 
 .funny-quote {
     position: absolute;
-    top: 17px; /* Adjust as needed to place it above the image */
+    top: 15px; /* Adjust as needed to place it above the image */
     left: 50%;
     transform: translateX(-50%);
     width: 100%; /* To ensure it's centered regardless of its length */
     color: #C19218; /* Yellow color, or use #FFF for white */
     font-family: 'Champignon', cursive;
-    font-size: 100px; /* Large font size */
+    font-size: 45px; /* Large font size */
     text-align: center;
     z-index: 5; /* Above the image */
 }
