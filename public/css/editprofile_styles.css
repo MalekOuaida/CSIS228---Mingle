@@ -1,0 +1,64 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Reset some basic elements */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Set the background color for the entire page */
+body {
+    background-color: #590517;
+    color: #fff;
+}
+
+/* Profile and Edit Profile Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Profile Title */
+h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Profile Details and Form Elements */
+.profile-details p, .form-group {
+    background-color: #440c28; /* Dark background for contrast */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners for aesthetic */
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Style for the Button */
+.btn-primary {
+    background-color: #C19218; /* Yellow color for the button */
+    border-color: #C19218;
+    display: block; /* Make the button a block element */
+    width: fit-content; /* Adjust width to content */
+    margin: 20px auto; /* Centering the button */
+}
+
+/* Input Styles */
+.form-group label {
+    color: #fff;
+}
+
+.form-control {
+    background-color: #440c28;
+    color: #fff;
+    border: 1px solid #C19218;
+}
+
+.form-control:focus {
+    background-color: #590517;
+    border-color: #C19218;
+}

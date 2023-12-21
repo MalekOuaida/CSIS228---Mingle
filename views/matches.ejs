@@ -25,6 +25,17 @@
         <button class="btn btn-success like-btn" onclick="handleLike()">
             <i class="bi bi-heart-fill"></i>
         </button>
+        <button class="btn btn-primary person-btn" onclick="location.href='/profile'">
+            <i class="bi bi-person-fill"></i>
+        </button>
+        
+
+        </button>
+        <div class="profile-info">
+            <div class="profile-name" id="profile-name">Name: Placeholder</div>
+            <div class="profile-bio" id="profile-bio">Bio: Short bio here</div>
+            <div class="profile-interests" id="profile-interests">Interests: List of interests</div>
+        </div>
     </div>
 </div>
 
@@ -100,11 +111,13 @@
     function handleLike() {
         const message = getRandomMessage(likeMessages);
         handleAction(message);
+        updateProfile(currentImageIndex++);
     }
 
     function handleDislike() {
         const message = getRandomMessage(dislikeMessages);
         handleAction(message);
+        updateProfile(currentImageIndex++);
     }
 
     function handleAction(message) {
@@ -115,8 +128,12 @@
         } else {
             profileImage.style.display = 'none';
             document.querySelectorAll('.btn').forEach(btn => btn.style.display = 'none');
-            showMessage("No more swipes for today, you looked at everyone."); // Final message
+            showMessage("No more swipes for today, you looked at everyone.");
         }
+    }
+
+    function handlePerson(){
+        window.href.location = "/profile";
     }
 </script>
 

@@ -1,13 +1,14 @@
 const db = require('../database/index');
 
-const getUsers = async () => {
+const getUsers = (callback) => {
     const query = 'SELECT * FROM Users';
-    try {
-        const [users] = await db.query(query);
-        return users;
-    } catch (error) {
-        throw new Error('Error fetching users: ' + error.message);
-    }
+    db.query(query, (error, results, fields) => {
+        if (error) {
+            if (callback) callback(new Error('Error fetching users: ' + error.message), null);
+        } else {
+            if (callback) callback(null, results);
+        }
+    });
 };
 
 const insertUser = async (username, email, password, firstname, lastname, gender, birthdate, profilePictureUrl, bio) => {

@@ -28,7 +28,7 @@ const validateRegistration = [
         .withMessage('Last name is required'),
 
     body('gender')
-        .isIn(['MALE', 'FEMALE', 'OTHER'])
+        .isIn(['male', 'female', 'other'])
         .withMessage('Gender must be either MALE, FEMALE, or OTHER'),
 
     body('birthdate')

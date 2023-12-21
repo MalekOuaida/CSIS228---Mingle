@@ -31,6 +31,20 @@ body, html {
     top: 0;
     left: 0;
 }
+.person-btn {
+    position: fixed;
+    top: 10px; /* Position at the top */
+    right: 10px; /* Position to the right */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Enlarge the icon inside the button */
+.person-btn .bi-person-fill {
+    color: #ffffff; /* White color for the icon */
+    font-size: 30px; /* Larger size for the icon */
+}
 
 /* Styles for the action buttons */
 .profile-stack .btn {
@@ -87,4 +101,23 @@ body, html {
     font-size: 45px; /* Large font size */
     text-align: center;
     z-index: 5; /* Above the image */
+}
+
+.profile-info {
+    position: fixed;
+    bottom: 410px;
+    left: 30%;
+    transform: translateX(-50%);
+    background-color: #C19218; /* The gold color used previously */
+    color: #ffffff; /* White text for contrast */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif; /* Roboto font */
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow for depth */
+    z-index: 10;
+}
+
+.profile-name, .profile-bio, .profile-interests {
+    margin-bottom: 10px;
 }

@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/login_styles.css"> <!-- Include your stylesheet here -->
+    <link rel="stylesheet" href="/css/login_styles.css">
 </head>
 <body>
     <div class="login-page">
         <div class="login-image"></div>
         <div class="login-container">
-        <h1 class="login-title">Log In</h1>
-        <p class="welcome-back">Welcome Back.</p>
-        <p class="instructions">Please Enter Your Details.</p>
-        <form action="/login" method="POST" class="login-form">
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            
-            <div class="form-footer">
-                <button type="submit" class="login-button">Login</button>
-                <a href="/signup" class="sign-up">Don’t have an account? Sign Up</a>
-            </div>
-        </form>
+            <h1 class="login-title">Log In</h1>
+            <p class="welcome-back">Welcome Back.</p>
+            <p class="instructions">Please Enter Your Details.</p>
+            <% if (error) { %>
+                <p class="error-message"><%= error %></p>
+            <% } %>
+            <form action="/login" method="POST" class="login-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="login-button">Login</button>
+                    <a href="/signup" class="sign-up">Don’t have an account? Sign Up</a>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

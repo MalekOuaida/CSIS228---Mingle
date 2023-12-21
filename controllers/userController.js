@@ -27,15 +27,15 @@ const getUsersController = async (req, res) => {
 const insertUserController = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        return res.render('signup', { errors: errors.array() });
     }
 
     const { username, email, password, firstname, lastname, gender, birthdate, profilePictureUrl, bio } = req.body;
     try {
         const newUser = await insertUser(username, email, password, firstname, lastname, gender, birthdate, profilePictureUrl, bio);
-        res.status(200).json({ newUser });
+        res.redirect('/login');
     } catch (error) {
-        res.status(500).json({ message: error?.message });
+        res.redirect('/login');
     }
 };
 
@@ -75,6 +75,18 @@ const deleteUserController = async (req, res) => {
     }
 };
 
+
+/*const displayUsersForMatchesController = async (req, res) => {
+    try {
+        const users = await userService.getUsers();
+        res.render('matches', { users });
+    } catch (error) {
+        console.log(error);
+        throw new Error('Error fetching users: ' + error.message);
+    }
+};
+*/
+
 module.exports = {
     authenticateController,
     getUsersController,
@@ -82,4 +94,5 @@ module.exports = {
     updateUserController,
     getUserProfileController,
     deleteUserController,
+    //displayUsersForMatchesController,
 };
