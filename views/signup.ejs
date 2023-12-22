@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Define the character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Set the page title -->
     <title>Sign Up</title>
+    
+    <!-- Link to Google Fonts for typography -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    
+    <!-- Include Bootstrap CSS for styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Link to custom CSS for additional styling -->
     <link rel="stylesheet" href="/css/signup_styles.css">
 </head>
 <body>
+    <!-- Create a container for the sign-up page -->
     <div class="signup-page">
         <div class="container">
+            <!-- Create a row for centering content -->
             <div class="row justify-content-center align-items-center">
+                <!-- Create a column for the sign-up form -->
                 <div class="col-md-6 signup-form">
+                    <!-- Display the sign-up form title -->
                     <h2 class="text-center">Sign Up</h2>
+                    <!-- Create a form for user registration -->
                     <form action="/signup" method="POST">                    
+                        <!-- Create form rows for user details -->
                         <div class="form-row">
+                            <!-- Input field for the first name -->
                             <div class="form-group col-md-6">
                                 <label for="firstname">First Name</label>
                                 <input type="text" class="form-control" id="firstname" name="firstname" required>
                             </div>
+                            <!-- Input field for the last name -->
                             <div class="form-group col-md-6">
                                 <label for="lastname">Last Name</label>
                                 <input type="text" class="form-control" id="lastname" name="lastname" required>
                             </div>
                         </div>
+                        <!-- Input field for the email address -->
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
+                        <!-- Input field for the password -->
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" class="form-control" id="password" name="password" required>
                         </div>
+                        <!-- Input field for the username -->
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" class="form-control" id="username" name="username" required>
                         </div>
+                        <!-- Create form rows for gender and birthdate -->
                         <div class="form-row">
+                            <!-- Dropdown for selecting gender -->
                             <div class="form-group col-md-6">
                                 <label for="gender">Gender</label>
                                 <select class="form-control" id="gender" name="gender" required>
@@ -48,20 +69,25 @@
                                     <option value="other">Other</option>
                                 </select>
                             </div>
+                            <!-- Input field for selecting the date of birth -->
                             <div class="form-group col-md-6">
                                 <label for="birthdate">Birthdate</label>
                                 <input type="date" class="form-control" id="birthdate" name="birthdate" required>
                             </div>
                         </div>
+                        <!-- Input field for profile picture URL -->
                         <div class="form-group">
                             <label for="profilePictureUrl">Profile Picture URL</label>
                             <input type="text" class="form-control" id="profilePictureUrl" name="profilePictureUrl">
                         </div>
+                        <!-- Textarea for entering a short bio -->
                         <div class="form-group">
                             <label for="bio">Short Bio</label>
                             <textarea class="form-control" id="bio" name="bio" rows="3"></textarea>
                         </div>
+                        <!-- Button for submitting the form -->
                         <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                        <!-- Link to the login page for existing users -->
                         <p class="text-center mt-2">
                             Already have an account? <a href="/login">Login here</a>.
                         </p>
@@ -71,7 +97,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <!-- Include Bootstrap JavaScript and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,3 +1,4 @@
+/* Styling for the entire page body */
 body, html {
     height: 100%;
     margin: 0;
@@ -7,6 +8,7 @@ body, html {
     justify-content: center;
 }
 
+/* Styling for a container that centers its content */
 .container {
     width: 100vw;
     height: 100vh;
@@ -15,6 +17,7 @@ body, html {
     justify-content: center;
 }
 
+/* Styling for a stack-like container for profile images */
 .profile-stack {
     position: relative;
     width: 500px; /* Width of the photo container */
@@ -22,102 +25,110 @@ body, html {
     overflow: hidden;
 }
 
+/* Styling for the profile image */
 .profile-img {
-    /* Full width and height of the .profile-stack container */
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover will ensure the image fills the container */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
 }
+
+/* Styling for a button to view a person's profile */
 .person-btn {
     position: fixed;
-    top: 10px; /* Position at the top */
-    right: 10px; /* Position to the right */
-    background-color: transparent; /* Transparent background */
-    border: none; /* Remove border */
-    z-index: 1000; /* Ensure it's above other elements */
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    z-index: 1000;
 }
 
-/* Enlarge the icon inside the button */
+/* Styling for the person icon inside the button */
 .person-btn .bi-person-fill {
-    color: #ffffff; /* White color for the icon */
-    font-size: 30px; /* Larger size for the icon */
+    color: #ffffff;
+    font-size: 30px;
 }
 
-/* Styles for the action buttons */
+/* Styles for action buttons on the profile stack */
 .profile-stack .btn {
     position: absolute;
-    z-index: 5; /* Higher than the image to ensure it's clickable */
-    width: 50px; /* Fixed width for buttons */
-    height: 50px; /* Fixed height for buttons */
+    z-index: 5;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 24px; /* Icon size */
+    font-size: 24px;
 }
 
+/* Styling for the dislike button */
 .dislike-btn {
-    bottom: 10px; /* Position at the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-120%); /* Adjust horizontal positioning */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-120%);
 }
 
+/* Styling for the SVG icon inside the dislike button */
 .dislike-btn svg {
-    fill: currentColor; /* Icon color matches the text color */
-    width: 24px; /* Icon width */
-    height: 30px; /* Icon height */
+    fill: currentColor;
+    width: 24px;
+    height: 30px;
 }
 
-
+/* Styling for the like button */
 .like-btn {
-    bottom: 10px; /* Position at the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(20%); /* Adjust horizontal positioning */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(20%);
 }
 
+/* Styling for a message notification */
 .message {
     position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #C19218; /* The gold color used previously */
-    color: #ffffff; /* White text for contrast */
+    background-color: #C19218;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
-    font-family: 'Roboto', sans-serif; /* Roboto font */
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
 
+/* Styling for a funny quote */
 .funny-quote {
     position: absolute;
-    top: 15px; /* Adjust as needed to place it above the image */
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* To ensure it's centered regardless of its length */
-    color: #C19218; /* Yellow color, or use #FFF for white */
+    width: 100%;
+    color: #C19218;
     font-family: 'Champignon', cursive;
-    font-size: 45px; /* Large font size */
+    font-size: 45px;
     text-align: center;
-    z-index: 5; /* Above the image */
+    z-index: 5;
 }
 
+/* Styling for profile information */
 .profile-info {
     position: fixed;
     bottom: 410px;
     left: 30%;
     transform: translateX(-50%);
-    background-color: #C19218; /* The gold color used previously */
-    color: #ffffff; /* White text for contrast */
+    background-color: #C19218;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
-    font-family: 'Roboto', sans-serif; /* Roboto font */
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
 
+/* Styling for profile name, bio, and interests */
 .profile-name, .profile-bio, .profile-interests {
     margin-bottom: 10px;
 }

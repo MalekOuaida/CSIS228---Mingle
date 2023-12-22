@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Define character encoding and set page title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
+
+    <!-- Link to Google Fonts (Roboto) for styling -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    
+    <!-- Link to Bootstrap CSS (ensure it is accessible) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Link to custom CSS for additional styling (ensure it exists in the public directory) -->
     <link rel="stylesheet" href="/css/404_styles.css">
 </head>
 <body>
+    <!-- Create a container for content, vertically and horizontally centered -->
     <div class="d-flex align-items-center justify-content-center vh-100">
+        <!-- Create a text center for the 404 error message -->
         <div class="text-center">
+            <!-- Display the large 404 error code -->
             <h1 class="display-1 fw-bold">404</h1>
+            
+            <!-- Display the error message with a text-danger color -->
             <p class="fs-3"> <span class="text-danger">Oops!</span> Page not found.</p>
+            
+            <!-- Provide a lead message for further information -->
             <p class="lead">
                 The page you’re looking for doesn’t exist.
             </p>
+            
+            <!-- Create a button to navigate back to the home page -->
             <a href="/" class="btn btn-primary">Go Home</a>
         </div>
     </div>
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    
+    <!-- Include Bootstrap JS, Popper.js, and jQuery for functionality -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

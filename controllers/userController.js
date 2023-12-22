@@ -1,6 +1,8 @@
 const { validationResult } = require('express-validator');
 const { getUsers, insertUser, authenticate, updateUser, getUserProfile, deleteUser } = require('../services/userServices');
 
+// Controller for user authentication
+
 const authenticateController = async (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) {
@@ -15,6 +17,7 @@ const authenticateController = async (req, res) => {
     }
 };
 
+// Controller for fetching all users
 const getUsersController = async (req, res) => {
     try {
         const users = await getUsers();
@@ -24,6 +27,7 @@ const getUsersController = async (req, res) => {
     }
 };
 
+// Controller for inserting a new user
 const insertUserController = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -39,6 +43,7 @@ const insertUserController = async (req, res) => {
     }
 };
 
+// Controller for updating user information
 const updateUserController = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -55,6 +60,7 @@ const updateUserController = async (req, res) => {
     }
 };
 
+// Controller for fetching a user's profile
 const getUserProfileController = async (req, res) => {
     const userId = req.params.userId;
     try {
@@ -65,6 +71,7 @@ const getUserProfileController = async (req, res) => {
     }
 };
 
+// Controller for deleting a user
 const deleteUserController = async (req, res) => {
     const userId = req.params.userId;
     try {

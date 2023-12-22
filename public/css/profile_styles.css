@@ -31,21 +31,21 @@ h2 {
 
 /* Profile Details */
 .profile-info p {
-    background-color: #fff; /* White background for the details */
-    color: #333; /* Dark text for readability */
+    background-color: #fff; 
+    color: #333;
     padding: 15px;
-    border-radius: 8px; /* Rounded corners for aesthetic */
-    margin-bottom: 10px; /* Space between each detail */
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 /* Style for the Edit Profile Button */
 .btn-primary {
-    background-color: #C19218; /* Custom yellow color */
+    background-color: #C19218;
     border-color: #C19218;
 }
 
 /* Ensure the button stands out */
 .btn-primary:hover {
-    background-color: #af8316; /* Darker shade for hover effect */
+    background-color: #af8316;
     border-color: #af8316;
 }

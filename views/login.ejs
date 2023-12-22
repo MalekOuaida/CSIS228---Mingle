@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Define character encoding and set page title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <!-- Link to fonts for styling -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Link to custom CSS for additional styling -->
     <link rel="stylesheet" href="/css/login_styles.css">
 </head>
 <body>
+    <!-- Create a div for the login page -->
     <div class="login-page">
+        <!-- Create a div for the login image (if applicable) -->
         <div class="login-image"></div>
+        
+        <!-- Create a container for login content -->
         <div class="login-container">
+            <!-- Display the login title -->
             <h1 class="login-title">Log In</h1>
+            
+            <!-- Display a welcome message -->
             <p class="welcome-back">Welcome Back.</p>
+            
+            <!-- Display login instructions -->
             <p class="instructions">Please Enter Your Details.</p>
+            
+            <!-- Display an error message if present -->
             <% if (error) { %>
                 <p class="error-message"><%= error %></p>
             <% } %>
+            
+            <!-- Create a login form -->
             <form action="/login" method="POST" class="login-form">
+                <!-- Create an input group for email -->
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 
+                <!-- Create an input group for password -->
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                 </div>
                 
+                <!-- Create a form footer with login button and sign-up link -->
                 <div class="form-footer">
                     <button type="submit" class="login-button">Login</button>
                     <a href="/signup" class="sign-up">Don’t have an account? Sign Up</a>

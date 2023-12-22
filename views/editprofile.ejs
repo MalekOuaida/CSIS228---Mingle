@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Define character encoding and set page title -->
     <meta charset="UTF-8">
     <title>Edit Profile</title>
+    
+    <!-- Link to Bootstrap CSS (ensure it is accessible) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- Link to custom CSS for additional styling (ensure it exists in the public directory) -->
     <link rel="stylesheet" href="/css/editprofile_styles.css">
 </head>
 <body>
+    <!-- Create a container for content with top margin -->
     <div class="container mt-5">
+        <!-- Display the heading for the Edit Profile page -->
         <h2>Edit Profile</h2>
+        
+        <!-- Create a form for profile editing -->
         <form>
+            <!-- Create a form group for updating the Photo URL -->
             <div class="form-group">
                 <label>Photo URL:</label>
                 <input type="text" class="form-control" placeholder="Enter new photo URL">
             </div>
+            
+            <!-- Create a form group for updating the Username -->
             <div class="form-group">
                 <label>Username:</label>
                 <input type="text" class="form-control" placeholder="Enter new username">
             </div>
+            
+            <!-- Create a form group for updating the Birthday -->
             <div class="form-group">
                 <label>Birthday:</label>
                 <input type="date" class="form-control">
             </div>
+            
+            <!-- Create a form group for updating the Bio -->
             <div class="form-group">
                 <label>Bio:</label>
                 <textarea class="form-control" rows="3" placeholder="Enter new bio"></textarea>
             </div>
+            
+            <!-- Create a form group for updating the First Name -->
             <div class="form-group">
                 <label>First Name:</label>
                 <input type="text" class="form-control" placeholder="Enter new first name">
             </div>
+            
+            <!-- Create a form group for updating the Last Name -->
             <div class="form-group">
                 <label>Last Name:</label>
                 <input type="text" class="form-control" placeholder="Enter new last name">
             </div>
+            
+            <!-- Create a button to update the profile -->
             <a href="/profile" class="btn btn-primary">Update Profile</a>  
         </form>
     </div>

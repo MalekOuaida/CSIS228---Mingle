@@ -1,30 +1,37 @@
+/* Styling for the page body */
 body {
     background-color: #F8F9FA; /* Light grey background */
     font-family: 'Roboto', sans-serif;
 }
 
+/* Styling for the main heading */
 h1 {
     font-size: 8rem; /* Big, bold number 404 */
     color: #6C757D; /* Muted color */
 }
 
+/* Styling for paragraphs */
 p {
     color: #6C757D; /* Muted color text */
 }
 
+/* Styling for primary buttons */
 .btn-primary {
     color: #fff;
     background-color: #007bff; /* Bootstrap primary color */
     border-color: #007bff;
 }
 
+/* Hover effect for primary buttons */
 .btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
 }
 
+/* Media query for smaller screens */
 @media (max-width: 768px) {
+    /* Adjusting main heading size for mobile */
     h1 {
         font-size: 6rem; /* Smaller 404 for mobile */
     }

@@ -1,16 +1,19 @@
 /* Ensure to link this CSS after Bootstrap's CSS to override default styles */
 
+/* Styling for the body */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #590517; /* Dark red background */
-    color: #C19218; /* Golden text color */
+    background-color: #590517;
+    color: #C19218;
 }
 
+/* Styling for header and footer */
 header, footer {
-    background-color: #C19218; /* Golden background for header and footer */
-    color: #590517; /* Dark red text */
+    background-color: #C19218; 
+    color: #590517;
 }
 
+/* Styling for the main heading */
 h1 {
     font-family: 'DM Serif Display', serif;
     font-size: 2.5rem;
@@ -18,12 +21,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Styling for paragraphs */
 p {
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: center;
 }
 
+/* Styling for navigation menu */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -45,6 +50,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Styling for the main content area */
 main {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -53,12 +59,14 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the footer paragraph */
 footer p {
     text-align: center;
     padding: 10px 0;
 }
 
 /* Bootstrap modifications */
+/* Styling for primary buttons */
 .btn-primary {
     background-color: #C19218;
     border-color: #590517;
@@ -71,6 +79,7 @@ footer p {
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
+    /* Adjusting navigation menu for smaller screens */
     nav ul li {
         display: block;
         margin: 10px 0;
